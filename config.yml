@@ -1,0 +1,95 @@
+general:
+  public_url: https://time.kusmedios.lat
+  api_key: c34d5a3c093e21256c6822ea1bbfed76f36d22a604c2d36428e120b36819cdcb
+  secret_key: 8178102c5e6ab89e2e40bee923b299ddbb83f4d58197f1efe921c1298c201f30
+  timezone: America/Mexico_City
+  allowed_cors_origins:
+    - https://time.kusmedios.lat
+    - https://8080--019be40a-bc72-7ed6-8909-4fb2d86ea9a0.eu-central-1-01.gitpod.dev
+
+storage:
+  path: /srv/libretime
+
+database:
+  host: postgres
+  port: 5432
+  name: libretime
+  user: libretime
+  password: libretime
+
+rabbitmq:
+  host: rabbitmq
+  port: 5672
+  vhost: /libretime
+  user: libretime
+  password: libretime
+
+playout:
+  liquidsoap_host: liquidsoap
+  liquidsoap_port: 1234
+
+liquidsoap:
+  server_listen_address: "0.0.0.0"
+  server_listen_port: 1234
+  harbor_listen_address: ["0.0.0.0"]
+
+stream:
+  inputs:
+    # Puerto principal para RadioBoss, VirtualDJ, BUTT, etc.
+    main:
+      mount: main
+      port: 8001
+      secure: false
+    # Puerto secundario para shows en vivo
+    show:
+      mount: show
+      port: 8002
+      secure: false
+
+  outputs:
+    icecast:
+      # Stream principal OGG alta calidad
+      - enabled: true
+        host: icecast
+        port: 8000
+        mount: live
+        source_password: KusRadio2026!
+        admin_password: KusAdmin2026!
+        audio:
+          format: ogg
+          bitrate: 256
+        name: EstacionKusmedios
+        description: Potenciado por EstacionKusmedios - Multi Radio
+        website: https://estacionkusmedios.org
+        genre: various
+
+      # Stream MP3 alta calidad - compatible con mas reproductores
+      - enabled: true
+        host: icecast
+        port: 8000
+        mount: live.mp3
+        source_password: KusRadio2026!
+        admin_password: KusAdmin2026!
+        audio:
+          format: mp3
+          bitrate: 256
+        name: EstacionKusmedios MP3
+        description: Potenciado por EstacionKusmedios - Multi Radio (MP3)
+        website: https://estacionkusmedios.org
+        genre: various
+
+      # Stream MP3 baja calidad - para conexiones lentas/moviles
+      - enabled: true
+        host: icecast
+        port: 8000
+        mount: mobile.mp3
+        source_password: KusRadio2026!
+        admin_password: KusAdmin2026!
+        audio:
+          format: mp3
+          bitrate: 96
+        name: EstacionKusmedios Mobile
+        description: Potenciado por EstacionKusmedios - Stream Movil
+        website: https://estacionkusmedios.org
+        genre: various
+        mobile: true

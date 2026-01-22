@@ -1,0 +1,9 @@
+version: "2"
+authtoken: 38bDzpsJIECwEEVp4OaaOxGKaJw_6QVeW2w9TBD8MDLnekLcQ
+tunnels:
+  radio-input-main:
+    proto: tcp
+    addr: 8001
+  radio-input-show:
+    proto: tcp
+    addr: 8002

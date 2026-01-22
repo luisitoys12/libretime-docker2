@@ -1,0 +1,18 @@
+tunnel: d81e06c2-82fb-42f0-bd0c-0780b3b91e57
+credentials-file: /etc/cloudflared/credentials.json
+
+ingress:
+  # Documentacion
+  - hostname: docs.kusmedios.lat
+    service: http://docs:80
+  # Panel de administracion LibreTime
+  - hostname: time.kusmedios.lat
+    service: http://nginx:8080
+  # Streaming de audio (Icecast)
+  - hostname: stream.kusmedios.lat
+    service: http://icecast:8000
+  # Entrada para RadioBoss/VirtualDJ/BUTT (puerto 8001)
+  - hostname: input.kusmedios.lat
+    service: http://liquidsoap:8001
+  # Fallback
+  - service: http_status:404

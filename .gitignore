@@ -1,0 +1,15 @@
+# Credenciales sensibles
+cloudflared-credentials.json
+.env
+
+# Logs
+*.log
+logs/
+
+# Datos de Docker volumes (no se suben)
+data/
+
+# Archivos temporales
+*.tmp
+*.bak
+.DS_Store
