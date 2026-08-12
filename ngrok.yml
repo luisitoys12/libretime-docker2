@@ -12,3 +12,8 @@ tunnels:
     proto: http
     addr: 8000
     inspect: false
+  # HTTP tunnel for LibreTime admin panel
+  radio-panel:
+    proto: http
+    addr: 8080
+    inspect: false
