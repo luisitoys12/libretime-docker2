@@ -7,9 +7,8 @@ tunnels:
   radio-input-show:
     proto: tcp
     addr: 8002
-  # HTTP tunnel for Icecast streaming output
+  # HTTP tunnel for Icecast streaming output (origin for bunny.net edge script)
   radio-stream:
     proto: http
     addr: 8000
-    host: localhost
     inspect: false
