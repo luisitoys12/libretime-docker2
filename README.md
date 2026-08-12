@@ -8,8 +8,8 @@ Configuración Docker de LibreTime para radio automatizada.
 |----------|-----|
 | Panel Admin | https://time.kusmedios.lat |
 | Documentación | https://docs.kusmedios.lat |
-| Stream OGG | https://stream.kusmedios.lat/live |
-| Stream MP3 | https://stream.kusmedios.lat/live.mp3 |
+| Stream OGG | https://libretime-afgbp.bunny.run/live |
+| Stream MP3 | https://libretime-afgbp.bunny.run/live.mp3 |
 
 ## Inicio Rápido
 
