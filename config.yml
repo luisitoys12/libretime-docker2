@@ -1,10 +1,11 @@
 general:
-  public_url: https://time.kusmedios.lat
+  public_url: https://hemoglobic-karla-calligraphically.ngrok-free.dev
   api_key: c34d5a3c093e21256c6822ea1bbfed76f36d22a604c2d36428e120b36819cdcb
   secret_key: 8178102c5e6ab89e2e40bee923b299ddbb83f4d58197f1efe921c1298c201f30
   timezone: America/Mexico_City
   allowed_cors_origins:
-    - https://time.kusmedios.lat
+    - https://hemoglobic-karla-calligraphically.ngrok-free.dev
+    - https://libretime-afgbp.bunny.run
     - https://8080--019be40a-bc72-7ed6-8909-4fb2d86ea9a0.eu-central-1-01.gitpod.dev
 
 storage:
